@@ -1,7 +1,12 @@
+import sys
+
 rep = 200
 
-aspect = 2.0;
-numy = 400
+print(len(sys.argv))
+
+aspect = 2.0 if len(sys.argv) <= 1 else float(sys.argv[1])
+
+numy = 300
 numx = (int)(numy*aspect)
 cx = -1.0
 cy = 0.0
