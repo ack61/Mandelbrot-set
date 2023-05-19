@@ -1,6 +1,6 @@
 rep = 200
 
-aspect = 3.0;
+aspect = 2.0;
 numy = 400
 numx = (int)(numy*aspect)
 cx = -1.0
@@ -31,9 +31,10 @@ for i in range(numy):
 			y = hy
 			c += 1
 		if is_in :
-			print("#", end = "")
+			print(" ", end = "")
 		else :
-			print("\033[3" + str(c%7) + "m#\033[0m", end = "")
+#			print("\033[3" + str(c%7) + "m#\033[0m", end = "")
+			print(",*@#"[c % 4], end = "")
 		nx += dx
 	print()
 	ny -= dy
